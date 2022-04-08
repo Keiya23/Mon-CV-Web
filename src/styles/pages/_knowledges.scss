@@ -1,0 +1,346 @@
+.knowledges {
+    .knowledgesContent {
+    min-height: $minHeight;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 42% 1fr 1fr;
+    grid-template-areas: 
+        "L E E"
+        "O O H";
+
+    .languagesFrameworks, .experience, .otherSkills, .hobbies {
+        background: $color-1;
+        border-radius: $borderRadius;
+        padding: .8rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        font-family: $font-2;
+        color: $color-2;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: $color-2;
+    }
+
+    .languagesFrameworks {
+        grid-area: L;
+        margin-bottom: .5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "L"
+        "F";
+
+        .languageDisplay {
+        grid-area: L;
+        }
+        .frameworkDisplay {
+        grid-area: F;
+        }
+        h3 {
+        margin-bottom: 0.3rem;
+        }
+
+        .stars {
+        font-size: .95rem;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        margin-top: 2.5rem;
+
+        span {
+            width: 20%;
+            transform: translateX(2px);
+
+            &:nth-child(2){
+            text-align: center; 
+            width: 15.5%;
+            }
+            &:nth-child(3){
+            text-align: center;
+            width: 11.5%;
+            }
+            &:nth-child(4){
+                text-align: center;
+                width: 11.5%;
+            }
+            &:nth-child(5){
+                text-align: center;
+                width: 11.5%;
+            }
+            &:nth-child(6){
+                text-align: center;
+                width: 11.5%;
+            }
+        
+            &:nth-child(2):before,
+            &:nth-child(3):before,
+            &:nth-child(4):before,
+            &:nth-child(5):before,
+            &:nth-child(6):before {
+            content:'';
+            background: rgba(180, 179, 179, 0.507);
+            position: absolute;
+            height: 164px;
+            width: 0.5px;
+            transform: translate(10px, 19px);
+            }
+        }
+        }
+        .languagesList {
+        padding-top: .5rem;
+        display: block;
+
+        li {
+            color: $color-2;
+        }
+        .progressBar {
+            height: .4rem;
+            background: transparent;
+            border-radius: 50px;
+            margin-top: 0.2rem;
+            position: relative;
+            margin-left: 20%;
+            display: flex;
+            justify-content: space-between;
+
+            &::after {
+            content:'';
+            position: absolute;
+            background: $color-4;
+            border-radius: 50px;
+            height: .4rem;
+            width: 0;
+            animation: line 2s ease-out forwards;
+
+                @keyframes line {
+                    to {
+                    width: 75.5%;
+                    }
+                }
+            }
+        }
+        }
+    }
+    .experience {
+        grid-area: E;
+        margin: 0 0 .5rem .5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 0.75fr 0.75fr;
+        grid-template-areas: 
+        "1"
+        "2"
+        "3"
+        "4";
+        
+        h3 {
+        grid-area: 1;
+        }
+        h4 {
+        font-size: 1.1rem;
+        color: $color-5;
+        }
+        h5 {
+        color: $color-2;
+        padding: 0.5rem 0 0.5rem 1rem;
+        }
+        p {
+        text-align: justify;
+        padding: 0 1rem;
+        }
+        .exp-1 {
+            grid-area: 2;
+        }
+        .exp-2 {
+            grid-area: 3;
+        }
+        .exp-3 {
+            grid-area: 4;
+        }
+    }
+    .otherSkills {
+        grid-area: O;
+        margin-right: 0.5rem;
+
+        h3 {
+            text-align: center;
+        }
+
+        .list {
+        display: flex;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        ul {
+            height: 80%;
+            display: grid;
+
+            li {
+                color: $color-2;
+            }
+
+            i {
+                color: $color-4;
+                margin-right: 10px;
+            }
+        }
+        }
+    }
+    .hobbies {
+        grid-area: H;
+        padding-left: 2.5rem;
+
+        ul {
+        height: 80%;
+        
+
+        li {
+            display: grid;
+            color: $color-2;
+            
+            i {
+            position: absolute;
+            color: $color-5;
+            }
+            span {
+            
+            transform: translateX(2.2rem);
+            }
+        }
+        }
+    }
+    }
+}
+@media screen and (max-width: 950px){
+
+    .knowledges {
+        .knowledgesContent {
+            .languagesFrameworks {
+                .stars {
+                    span {
+                        &:nth-child(2):before,
+                        &:nth-child(3):before,
+                        &:nth-child(4):before,
+                        &:nth-child(5):before,
+                        &:nth-child(6):before {
+                            content:'';
+                            height: 145px;
+                            color: grey;
+                            }
+                    }
+                }
+            }
+        }
+    }
+    .knowledgesContent {
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+    .languagesList {
+        padding-top: .2rem !important;
+    }
+    p {
+        font-size: .8rem;
+    }
+    .otherSkills, .hobbies {
+        font-size: .8rem;
+    }
+    }
+}
+@media screen and (max-width: 850px){
+
+    .knowledges {
+        .knowledgesContent {
+            .languagesFrameworks {
+                .stars {
+                    span {
+                        &:nth-child(2):before,
+                        &:nth-child(3):before,
+                        &:nth-child(4):before,
+                        &:nth-child(5):before,
+                        &:nth-child(6):before {
+                            content:'';
+                            height: 135px;
+                            color: grey;
+                            transform: translate(7px, 19px);
+                            }
+                    }
+                }
+            }
+        }
+    }
+
+    .knowledgesContent {
+    h4 {
+        font-size: .9rem !important;
+    }
+    h5 {
+        font-size: .6rem !important;
+        padding: .2rem 1rem !important;
+    }
+    }
+    .stars {
+        span {
+            font-size: 0.7rem !important;
+        }
+        
+    }
+}
+@media screen and (max-width: 500px){
+
+    .knowledges {
+        .knowledgesContent {
+            .languagesFrameworks {
+                .stars {
+                    span {
+                        &:nth-child(2):before,
+                        &:nth-child(3):before,
+                        &:nth-child(4):before,
+                        &:nth-child(5):before,
+                        &:nth-child(6):before {
+                            content:'';
+                            height: 122px;
+                            color: grey;
+                            }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .knowledgesContent {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr 180px 180px !important;
+    
+    
+    
+    .languages {
+        grid-area: 1 !important;
+    }
+    .experience {
+        grid-area: 2 !important;
+        margin-left: 0 !important;
+    }
+    .otherSkills {
+        grid-area: 3 !important;
+        margin-right: 0 !important;
+    }
+    .hobbies {
+        grid-area: 4 !important;
+        margin-top: .5rem !important;
+    }
+    }
+}
