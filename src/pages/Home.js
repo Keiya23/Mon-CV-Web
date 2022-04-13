@@ -2,6 +2,8 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 
 
+// Page Home avec affichage du nom, titre et d'un lien pour télécharger le CV en pdf
+
 const Home = () => {
     return (
         <div className='home'>

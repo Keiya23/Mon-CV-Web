@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Autres compétences avec une icone check square
+
 const OtherSkills = () => {
     return (
             <div className='otherSkills'>

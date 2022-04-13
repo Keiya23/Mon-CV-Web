@@ -9,6 +9,9 @@ import Notfound from './pages/Notfound';
 
 const App = () => {
   return (
+
+    // Retourne les routes de mes pages Home, competences, portfolio, contact et NotFound
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/competences" element={<Knowledges />} />

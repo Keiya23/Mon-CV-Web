@@ -18,6 +18,7 @@ const Contact = () => {
                             <span>Bolbec</span>
                         </li>
                         <li>
+                            {/* Affichage du téléphone ainsi que le mail pouvant être cliqués pour etre copiés grace a copytoclipboard */}
                             <i className='fas fa-mobile-alt'></i>
                             <CopyToClipboard text='0681945929'>
                                 <span className='clickInput' onClick={() => {
@@ -36,7 +37,8 @@ const Contact = () => {
                         <li></li>
                     </ul>
                 </div>
-
+                
+                {/* Lien vers 4 réseaux sociaux */}
                 <div className='socialNetwork'>
                     <ul>
                         <a href='https://www.linkedin.com/in/lambert-tessier' target='_blank' rel='noopener noreferrer'>

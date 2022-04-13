@@ -134,7 +134,7 @@
         margin: 0 0 .5rem .5rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10% 0.75fr 0.75fr;
+        grid-template-rows: 10% 0.5fr 0.5fr;
         grid-template-areas: 
         "1"
         "2"
@@ -344,3 +344,4 @@
     }
     }
 }
+

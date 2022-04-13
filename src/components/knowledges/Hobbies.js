@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+    // Différents hobbies avec une icone correspondant
+
 const Hobbies = () => {
     return (
         

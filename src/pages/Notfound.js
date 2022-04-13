@@ -5,6 +5,7 @@ const Notfound = () => {
     return (
         <div className='notFound'>
             <div className='notFoundContent'>
+                {/* En cas d'erreur dans l'écriture du lien, possibilité de retourner sur Home */}
                 <h3>Désolé cette page n'existe pas</h3>
                 <NavLink
                         to="/"

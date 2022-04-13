@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/styles.scss';
 
+// Import de App, du styles.scss et creation de mes routes avec BrowserRouter
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

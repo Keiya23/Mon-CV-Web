@@ -5,6 +5,9 @@ import Languages from '../components/knowledges/Languages';
 import OtherSkills from '../components/knowledges/OtherSkills';
 import Navigation from '../components/Navigation';
 
+
+// Page Compétences appelant mes components languages, experience, otherskills et hobbies
+
 const Knowledges = () => {
     return (
         <div className='knowledges'>

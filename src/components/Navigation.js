@@ -1,8 +1,7 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
 
-
+// Component Navigation appelé sur toutes mes pages
 
 const Navigation = () => {
 
@@ -18,6 +17,9 @@ const Navigation = () => {
             <div className='navigation'>
                 <ul>
                     <li>
+                    
+                    {/* Recherche de la page active */}
+
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
@@ -67,13 +69,13 @@ const Navigation = () => {
             <div className='socialNetwork'>
                 <ul>
                     <li>
-                        <a href='https://www.linkedin.com/in/lambert-tessier'><i className='fa fa-linkedin'></i></a>
+                        <a href='https://www.linkedin.com/in/lambert-tessier' target="_blank" rel='noreferrer'><i className='fa fa-linkedin'></i></a>
                     </li>
                     <li>
-                        <a href='https://github.com/Keiya23'><i className='fa fa-github'></i></a>
+                        <a href='https://github.com/Keiya23' target="_blank" rel='noreferrer'><i className='fa fa-github'></i></a>
                     </li>
                     <li>
-                        <a href='https://www.codepen.io'><i className='fa fa-codepen'></i></a>
+                        <a href='https://www.codepen.io' target="_blank" rel='noreferrer'><i className='fa fa-codepen'></i></a>
                     </li>
                 </ul>
             

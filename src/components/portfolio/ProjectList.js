@@ -3,6 +3,8 @@ import { portfolioData } from '../../data/portfolioData';
 import Project from './Project';
 
 class ProjectList extends Component {
+
+    // Stockage des différents langages dans mon state ainsi que selection par défault du langage JS. projects appelle portfolioData
     state = {
         projects:portfolioData,
         radios: [
@@ -14,8 +16,9 @@ class ProjectList extends Component {
         selectedRadio: 'javascript'
     };
 
-    handleRadio = (event) => {
-        let radio = event.target.value;
+    handleRadio = (e) => {
+        // Change l'état de la radio suivant la radio selectionnée
+        let radio = e.target.value;
         this.setState({selectedRadio: radio})
     }
 
@@ -25,8 +28,10 @@ class ProjectList extends Component {
             <div className='portfolioContent'>
                 <ul className='radioDisplay'>
                     {
+                        // Affiche ma liste de langages avec possibilité de modifier la radio selectionnée
                         radios.map((radio) => {
                             return (
+                                
                                 <li key={radio.id}>
                                     <input 
                                     type="radio" 
@@ -44,6 +49,7 @@ class ProjectList extends Component {
                 </ul>
                 <div className='projects'>
                     {
+                        // Récupère mon portfolioData, et pour chaque id, affiche l'item et apelle le component Project
                         projects
                         .filter(item => item.languages.includes(selectedRadio))
                         .map(item => {

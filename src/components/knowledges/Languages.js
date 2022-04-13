@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ProgressBar from './ProgressBar';
 
 class Languages extends Component {
+
+    // Les différents langages et frameworks stockées dans un objet state
+
     state = {
         languages : [
             {id: 1, value: "Javascript", stars:4},
@@ -19,6 +22,9 @@ class Languages extends Component {
 
     render() {
         let {languages, frameworks} = this.state;
+
+        // Rendu de mon state en faisant appel au component ProgressBar
+
         return (
             <div className='languagesFrameworks'>
                 <ProgressBar 

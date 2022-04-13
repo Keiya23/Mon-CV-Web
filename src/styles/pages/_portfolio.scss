@@ -210,6 +210,7 @@
     .portfolioContent {
     .project {
         width: 49% !important;
+        grid-area: 1;
 
         i {
         font-size: 1rem;
@@ -222,10 +223,16 @@
 }
 @media (max-width: 520px){
     .radioDisplay {
-    display: none !important;
+    // display: none !important;
+    height: 50px !important;
+    position: absolute !important;
+
+        li {
+            font-size: .8rem !important;
+        }
     }
     .portfolioContent {
-    grid-template-rows: 1fr !important;
+    // grid-template-rows: 1fr !important;
 
     .project {
         grid-template-rows: 30px 40px 80px 40px !important;

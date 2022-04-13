@@ -1,3 +1,5 @@
+// Object portfolioData regroupant 6 projects avec la liste des langages utilisés
+
 export const portfolioData = [
   {
     id: 1,
